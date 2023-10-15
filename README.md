@@ -56,7 +56,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 * [NeoVim config](init.vim) - put this file into this direcroty *~/.config/nvim/*
 
-* Open `nvim` and start install plugins: `:PlugInstall`
+* Open `nvim` and start install plugins:
+```shell
+:source %
+:PluginInstall
+:call mkdp#util#install()
+```
 
 * LSP-TSServer require latest Node.js and npm, so install they if you haven't done before: 
 ```shell
